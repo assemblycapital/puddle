@@ -1,5 +1,8 @@
 import KinodeClientApi from "@kinode/client-api";
-// export * from './utils';
+export {useServiceStore} from "./store/service";
+
+export * from './utils';
+export * from './components/index';
 
 export enum ConnectionStatusType {
   Connecting,

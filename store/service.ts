@@ -57,7 +57,7 @@ export interface ServiceStore {
   setFullServiceMetadata: (metadata: ServiceMetadata | null) => void,
 }
 
-const useServiceStore = create<ServiceStore>((set, get) => ({
+export const useServiceStore = create<ServiceStore>((set, get) => ({
   serviceId: null,
   setServiceId: (serviceId) => set({ serviceId }),
   //
