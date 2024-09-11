@@ -1,6 +1,6 @@
 import { create } from 'zustand'
-import {Peer, PeerMap, Service, ServiceApi, ServiceConnectionStatus, ServiceMetadata, ServiceCreationOptions, PublicServiceMetadata, ServiceEditOptions} from '@dartfrog/puddle';
 import { maybePlaySoundEffect, maybePlayTTS } from '../utils';
+import { PeerMap, PublicServiceMetadata, Service, ServiceApi, ServiceConnectionStatus, ServiceCreationOptions, ServiceEditOptions, ServiceMetadata } from '..';
 
 export type ChatState = {
   messages: Map<number, ChatMessage>;

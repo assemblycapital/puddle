@@ -1,8 +1,8 @@
 
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import useChatStore from '@dartfrog/puddle/store/service';
-import { DEFAULT_PFP, Peer } from '@dartfrog/puddle/index';
+import useChatStore from '../store/service';
+import { DEFAULT_PFP, Peer } from '..';
 
 const ProfilePicture: React.FC<{ size: string; node: string }> = ({ size, node }) => {
     const { peerMap } = useChatStore();

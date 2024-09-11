@@ -2,12 +2,12 @@ import * as React from 'react';
 import {useRef, useState, useEffect, useCallback} from 'react';
 import ChatInput from './ChatInput';
 import ChatHeader from './ChatHeader';
-import useChatStore, { ChatState, ChatMessage } from '@dartfrog/puddle/store/service';
 import Split from 'react-split';
 import './ChatBox.css';
-import { dfLinkRegex, dfLinkToRealLink, getPeerNameColor, nodeProfileLink } from '@dartfrog/puddle';
 import ProfilePicture from './ProfilePicture';
 import DisplayUserActivity from './DisplayUserActivity';
+import useServiceStore, { ChatMessage, ChatState } from '../store/service';
+import { dfLinkRegex, dfLinkToRealLink, getPeerNameColor, nodeProfileLink } from '..';
 
 interface ChatBoxProps {
   chatState: ChatState;
@@ -27,7 +27,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
   const [showButton, setShowButton] = useState(false);
   const scrollTimer = useRef<NodeJS.Timeout | null>(null);
 
-  const {peerMap, chatSoundsEnabled} = useChatStore();
+  const {peerMap, chatSoundsEnabled} = useServiceStore();
 
   useEffect(() => {
     const updateInputHeight = () => {
@@ -44,8 +44,8 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
       return;
     }
 
-    const sortedMessages = Array.from(chatState.messages.values()).sort((a, b) => a.id - b.id);
-    setChatMessageList(sortedMessages);
+    const sortedMessages = Array.from(chatState.messages.values()).sort((a, b) => (a as ChatMessage).id - (b as ChatMessage).id);
+    setChatMessageList(sortedMessages as ChatMessage[]);
     scrollDownChat();
 
   }, [chatState.messages]);

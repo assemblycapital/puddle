@@ -1,15 +1,21 @@
 {
   "name": "@dartfrog/puddle",
   "version": "1.0.0",
-  "main": "index.ts",
-  "types": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./store/service": "./dist/store/service.js"
+  },
   "dependencies": {
     "@kinode/client-api": "^0.1.0",
     "howler": "^2.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
+    "react-split": "^2.0.14",
     "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4"
   }
 }
-

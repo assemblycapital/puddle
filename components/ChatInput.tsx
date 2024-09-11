@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { useCallback, useState } from 'react';
-import useChatStore from '@dartfrog/puddle/store/service';
-import { maybeReplaceWithImage } from '@dartfrog/puddle/utils';
+import useServiceStore from '../store/service';
+import { maybeReplaceWithImage } from '../utils';
 
 interface ChatInputProps {
 }
 
 const ChatInput: React.FC<ChatInputProps> = ({  }) => {
   const [chatMessageInputText, setChatMessageInputText] = useState('');
-  const {sendChat} = useChatStore();
+  const {sendChat} = useServiceStore();
 
   const handleInputChange = (event) => {
     setChatMessageInputText(event.target.value);

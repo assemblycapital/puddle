@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import TopBar from '@dartfrog/puddle/components/TopBar';
-import { ServiceApi, ServiceConnectionStatus, ServiceConnectionStatusType, ServiceID, ServiceMetadata } from '@dartfrog/puddle';
-import useServiceStore from '@dartfrog/puddle/store/service';
-import ChatBox from '@dartfrog/puddle/components/ChatBox';
-import DisplayUserActivity from '@dartfrog/puddle/components/DisplayUserActivity';
 import Split from 'react-split';
-import { renderConnectionStatus } from '@dartfrog/puddle/components/ServiceView';
-import "@dartfrog/puddle/components/App.css";
+import useServiceStore from '../store/service';
+import { ServiceApi, ServiceConnectionStatusType, ServiceID } from '..';
+import { renderConnectionStatus } from './ServiceView';
+import TopBar from './TopBar';
+import ChatBox from './ChatBox';
+import DisplayUserActivity from './DisplayUserActivity';
 
 const SplitComponent = Split as unknown as React.FC<any>;
 

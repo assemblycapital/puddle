@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { HamburgerIcon, HomeIcon } from '@dartfrog/puddle/components/Icons';
+import { HomeIcon } from './Icons';
 
 const TopBar = ({ serviceId }) => {
   const [serviceIdDisplayText, setServiceIdDisplayText] = useState(`df://${serviceId}`);

@@ -1,4 +1,4 @@
-import { getPeerNameColor, PublicServiceMetadata, Service, ServiceID, ServiceMetadata } from '@dartfrog/puddle/index';
+import { getPeerNameColor, PublicServiceMetadata, Service, ServiceID, ServiceMetadata } from '..';
 import * as React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 import useChatStore from '../store/service';
@@ -6,6 +6,13 @@ import useChatStore from '../store/service';
 interface DisplayUserActivityProps {
   metadata: PublicServiceMetadata;
 }
+
+interface GroupedUsers {
+  online: { user: string; time: number }[];
+  recentlyOnline: { user: string; time: number }[];
+  ever: { user: string; time: number }[];
+}
+
 
 const DisplayUserActivity: React.FC<DisplayUserActivityProps> = ({metadata}) => {
 
@@ -31,16 +38,16 @@ const DisplayUserActivity: React.FC<DisplayUserActivityProps> = ({metadata}) => 
     if (!metadata) return;
     const time = Date.now();
 
-    const newGroupedUsers = Array.from(metadata.user_presence || []).reduce(
+    const newGroupedUsers = Array.from(metadata.user_presence || []).reduce<GroupedUsers>(
       (groups, [key, lastActivityTime]) => {
         const isSubscribed = metadata.subscribers?.includes(key) || false;
         const status = activityStatus(isSubscribed, lastActivityTime*1000, time);
-        groups[status].push(key);
+        groups[status].push({ user: key, time: lastActivityTime*1000 });
         return groups;
       },
-      { online: [], recentlyOnline: [], ever: [] } 
+      { online: [], recentlyOnline: [], ever: [] }
     );
-    setGroupedUsers(newGroupedUsers);
+
     // Sort each group by last activity time, descending
     const sortByLastActivityTimeDesc = (a, b) => b.time - a.time;
 
@@ -50,9 +57,9 @@ const DisplayUserActivity: React.FC<DisplayUserActivityProps> = ({metadata}) => 
 
     // Map the groups to just user names
     setGroupedUsers({
-      online: newGroupedUsers.online.map(user => user),
-      recentlyOnline: newGroupedUsers.recentlyOnline.map(user => user),
-      ever: newGroupedUsers.ever.map(user => user)
+      online: newGroupedUsers.online.map(item => item.user),
+      recentlyOnline: newGroupedUsers.recentlyOnline.map(item => item.user),
+      ever: newGroupedUsers.ever.map(item => item.user)
     });
   }, [metadata]);
 

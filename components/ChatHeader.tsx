@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import {  } from '@dartfrog/puddle';
 import useChatStore from '../store/service';
 
 interface ChatHeaderProps {

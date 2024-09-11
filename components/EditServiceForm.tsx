@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Service, ServiceAccess, ServiceVisibility, ServiceEditOptions } from '@dartfrog/puddle/index';
+import { Service, ServiceAccess, ServiceVisibility, ServiceEditOptions } from '..';
 import "./EditServiceForm.css";
 
 interface EditServiceFormProps {

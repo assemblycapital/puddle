@@ -1,13 +1,10 @@
 import * as React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import { useLocation, useParams, useNavigate } from 'react-router-dom';
-import TopBar from '@dartfrog/puddle/components/TopBar';
-import { ServiceApi, ServiceConnectionStatus, ServiceConnectionStatusType, ServiceID, ServiceMetadata } from '@dartfrog/puddle';
-import useChatStore, { ChatState, ChatMessage } from '@dartfrog/puddle/store/service';
-import ChatBox from '@dartfrog/puddle/components/ChatBox';
-import Spinner from '@dartfrog/puddle/components/Spinner';
-import { maybePlaySoundEffect, maybePlayTTS } from '@dartfrog/puddle/utils';
-import DisplayUserActivity from '@dartfrog/puddle/components/DisplayUserActivity';
+import { ServiceApi, ServiceConnectionStatus, ServiceConnectionStatusType, ServiceID } from '..';
+import Spinner from './Spinner';
+import useServiceStore from '../store/service';
+import TopBar from './TopBar';
 
 interface ServiceViewProps {
   onServiceMessage?: (msg: any) => void;
@@ -105,7 +102,7 @@ const ServiceView : React.FC<ServiceViewProps> = ({ onServiceMessage, onClientMe
     addChatMessage, chatState, setServiceConnectionStatus, serviceConnectionStatus,
     setServiceMetadata, serviceMetadata, setChatSoundsEnabled,
     setFullServiceMetadata,
-  } = useChatStore();
+  } = useServiceStore();
 
   useEffect(()=> {
     setChatSoundsEnabled(enableChatSounds)
