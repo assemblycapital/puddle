@@ -24,7 +24,6 @@ interface HalfChatProps {
 const HalfChat: React.FC<HalfChatProps> = ({ onServiceMessage, onClientMessage, Element, processName, websocketUrl, ourNode, enableChatSounds = false }) => {
   const { id } = useParams<{ id?: string; }>();
   const paramServiceId = id ?? '';
-  console.log("paramserviceid", paramServiceId)
   const reconnectTimer = useRef<NodeJS.Timeout | null>(null);
   const [updateCount, setUpdateCount] = useState(0);
   const isPageVisible = useRef(true);

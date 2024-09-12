@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { getServiceRecencyText, ServiceApi, ServiceCreationOptions, ServiceAccess, ServiceVisibility } from "..";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useServiceStore from '../store/service';
 
 const NoServiceView = ({ processName, websocketUrl, ourNode }: { processName: string, websocketUrl: string, ourNode:string}) => {
   const {api, setApi, createService, deleteService, requestMyServices, setPeerMap, localServices, setLocalServices,} = useServiceStore();
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(()=>{
     const newApi = new ServiceApi({
       our: {
@@ -91,8 +91,8 @@ const NoServiceView = ({ processName, websocketUrl, ourNode }: { processName: st
                   }}
                   href={`/${processName}/df/service/${service.id.toString()}`}
                   onClick={(e)=>{
-                    // e.preventDefault();
-                    // navigate(`/df/service/${service.id.toString()}`)
+                    e.preventDefault();
+                    navigate(`/df/service/${service.id.toString()}`)
                   }}
                 >
                   join

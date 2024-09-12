@@ -3,6 +3,9 @@
     "jsx": "react",
     "esModuleInterop": true,
     "lib": ["ES2015", "DOM"],
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
   }
 }
