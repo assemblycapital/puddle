@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { useEffect, useState, useRef } from 'react';
+// import * as React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import Split from 'react-split';
 import useServiceStore from '../store/service';
@@ -24,6 +24,7 @@ interface HalfChatProps {
 const HalfChat: React.FC<HalfChatProps> = ({ onServiceMessage, onClientMessage, Element, processName, websocketUrl, ourNode, enableChatSounds = false }) => {
   const { id } = useParams<{ id?: string; }>();
   const paramServiceId = id ?? '';
+  console.log("paramserviceid", paramServiceId)
   const reconnectTimer = useRef<NodeJS.Timeout | null>(null);
   const [updateCount, setUpdateCount] = useState(0);
   const isPageVisible = useRef(true);
@@ -112,6 +113,7 @@ const HalfChat: React.FC<HalfChatProps> = ({ onServiceMessage, onClientMessage, 
         }
       },
       onOpen: (api) => {
+        console.log("halfchat onopen")
         setIsClientConnected(true);
         if (reconnectTimer.current) {
           clearTimeout(reconnectTimer.current);

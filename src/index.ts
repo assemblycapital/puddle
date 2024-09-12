@@ -1,5 +1,14 @@
 import KinodeClientApi from "@kinode/client-api";
 export {useServiceStore} from "./store/service";
+export {
+  BrowserRouter,
+  Link,
+  Route,
+  Routes,
+  Router,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 
 export * from './utils';
 export * from './components/index';

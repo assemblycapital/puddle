@@ -1,6 +1,5 @@
 import { getPeerNameColor, PublicServiceMetadata, Service, ServiceID, ServiceMetadata } from '..';
-import * as React from 'react';
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import useChatStore from '../store/service';
 
 interface DisplayUserActivityProps {

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import {useRef, useState, useEffect, useCallback} from 'react';
+import React, {useRef, useState, useEffect, useCallback} from 'react';
 import ChatInput from './ChatInput';
 import ChatHeader from './ChatHeader';
 import Split from 'react-split';

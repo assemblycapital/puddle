@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation, useParams, useNavigate } from 'react-router-dom';
 import { ServiceApi, ServiceConnectionStatus, ServiceConnectionStatusType, ServiceID } from '..';
 import Spinner from './Spinner';

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 interface SpinnerProps {
   size?: string; // Size prop can be in px, em, %, etc.

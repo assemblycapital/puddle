@@ -1,6 +1,5 @@
 
-import * as React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useChatStore from '../store/service';
 import { DEFAULT_PFP, Peer } from '..';
 
