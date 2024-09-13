@@ -1,7 +1,7 @@
 import _r from "@kinode/client-api";
 import { create as Cr } from "zustand";
 import $e, { useState as re, useRef as Ee, useEffect as ue, useCallback as He } from "react";
-const Sn = !0, wn = "fake.dev", Rt = {
+const Sn = !1, wn = "waterhouse.os", Rt = {
   "/fart": "https://bwyl.nyc3.digitaloceanspaces.com/kinode/dartfrog/chat_sounds/wet.mp3",
   "/no": "https://bwyl.nyc3.digitaloceanspaces.com/kinode/dartfrog/chat_sounds/hell-naw-dog.mp3",
   "/yes": "https://bwyl.nyc3.digitaloceanspaces.com/kinode/dartfrog/chat_sounds/oh-yes.mp3",

@@ -1,4 +1,4 @@
-export declare const IS_FAKE = true;
+export declare const IS_FAKE = false;
 export declare const HUB_NODE: string;
 export declare const soundEffectCommands: {
     '/fart': string;
