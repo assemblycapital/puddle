@@ -7,6 +7,7 @@ import ProfilePicture from './ProfilePicture';
 import DisplayUserActivity from './DisplayUserActivity';
 import useServiceStore, { ChatMessage, ChatState } from '../store/service';
 import { dfLinkRegex, dfLinkToRealLink, getPeerNameColor, nodeProfileLink } from '..';
+import { isImageUrl, formatTimestamp, linkRegex } from '../utils';
 
 interface ChatBoxProps {
   chatState: ChatState;
@@ -52,9 +53,9 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
   const scrollDownChat = useCallback(() => {
     if (messagesEndRef.current && !showButton) {
       let behavior = "auto";
-      if (chatState.lastUpdateType === "message") {
-        behavior = "smooth";
-      }
+      // if (chatState.lastUpdateType === "message") {
+      //   behavior = "smooth";
+      // }
       messagesEndRef.current.scrollIntoView({ behavior: behavior as ScrollBehavior, block: 'nearest', inline: 'start' });
     } else {
         setUnseenMessagesCount(prevCount => prevCount + 1)
@@ -341,35 +342,3 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
 };
 
 export default React.memo(ChatBox);
-
-export const linkRegex = /^https?:\/\/\S+$/i;
-export const imageRegex = /^https?:\/\/\S+\.(?:jpg|jpeg|png|gif|webp)$/i;
-
-export function isImageUrl(url: string) {
-  return imageRegex.test(url);
-}
-
-
-export function formatTimestamp(timestamp: number): string {
-  const date = new Date(timestamp * 1000); // convert from seconds to milliseconds
-  const now = new Date();
-  const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-  const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000);
-
-  if (date < oneWeekAgo) {
-    return date.toLocaleString('en-US', {
-      month: '2-digit',
-      day: '2-digit',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
-    }).replace(',', '');
-  } else {
-    const isToday = date.toDateString() === now.toDateString();
-    const isYesterday = date.toDateString() === yesterday.toDateString();
-    const day = isToday ? 'Today' : isYesterday ? 'Yesterday' : date.toLocaleDateString('en-US', { weekday: 'short' });
-    const time = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }); // use 12-hour format with AM/PM and no leading zero
-    return `${day} ${time}`;
-  }
-}

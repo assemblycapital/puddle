@@ -8,3 +8,4 @@ export { default as ChatBox } from './ChatBox';
 export { default as HalfChat } from './HalfChat';
 export { default as NoServiceView } from './NoServiceView';
 export { default as EditServiceForm } from './EditServiceForm';
+export { default as Spinner } from './Spinner';

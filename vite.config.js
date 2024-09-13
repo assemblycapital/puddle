@@ -19,7 +19,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react-router-dom', '@kinode/client-api', 'zustand', '@remix-run/router', 'react-router', ],
+      external: ['react', 'react-dom', '@kinode/client-api', 'zustand', ],
     },
   },
   resolve: {

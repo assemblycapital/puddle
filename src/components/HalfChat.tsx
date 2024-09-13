@@ -1,6 +1,5 @@
 // import * as React from 'react';
 import React, { useEffect, useState, useRef } from 'react';
-import { useParams } from 'react-router-dom';
 import Split from 'react-split';
 import useServiceStore from '../store/service';
 import { ServiceApi, ServiceConnectionStatusType, ServiceID } from '..';
@@ -19,12 +18,10 @@ interface HalfChatProps {
   ourNode: string;
   websocketUrl?: string;
   enableChatSounds?: boolean;
+  paramServiceId?: string;
 }
 
-const HalfChat: React.FC<HalfChatProps> = ({ onServiceMessage, onClientMessage, Element, processName, websocketUrl, ourNode, enableChatSounds = false }) => {
-  const { id } = useParams<{ id?: string; }>();
-  const paramServiceId = id ?? '';
-  console.log("paramserviceid", paramServiceId)
+const HalfChat: React.FC<HalfChatProps> = ({ onServiceMessage, onClientMessage, Element, processName, websocketUrl, ourNode, enableChatSounds = false, paramServiceId = ''}) => {
   const reconnectTimer = useRef<NodeJS.Timeout | null>(null);
   const [updateCount, setUpdateCount] = useState(0);
   const isPageVisible = useRef(true);
@@ -61,7 +58,10 @@ const HalfChat: React.FC<HalfChatProps> = ({ onServiceMessage, onClientMessage, 
 
   const updateTitle = () => {
     if (paramServiceId) {
-      const shortServiceId = ServiceID.fromString(paramServiceId).toShortString();
+      const parseServiceId = ServiceID.fromString(paramServiceId);
+      if (!parseServiceId) return;
+
+      const shortServiceId = parseServiceId.toShortString();
       document.title = (isPageVisible.current || updateCount === 0)
         ? shortServiceId
         : `${shortServiceId} (${updateCount})`;

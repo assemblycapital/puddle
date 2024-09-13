@@ -32,11 +32,8 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.26.2",
     "zustand": "^4.4.7",
-    "@kinode/client-api": "^0.1.0",
-    "@remix-run/router": "*",
-    "react-router": "*"
+    "@kinode/client-api": "^0.1.0"
   },
   "scripts": {
     "build": "vite build",

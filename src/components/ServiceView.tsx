@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useLocation, useParams, useNavigate } from 'react-router-dom';
 import { ServiceApi, ServiceConnectionStatus, ServiceConnectionStatusType, ServiceID } from '..';
 import Spinner from './Spinner';
 import useServiceStore from '../store/service';
@@ -14,6 +13,7 @@ interface ServiceViewProps {
   websocketUrl?: string;
   enableChatSounds?: boolean;
   fullscreen?: boolean;
+  paramServiceId: string;
 }
 
 export const renderConnectionStatus = (
@@ -87,9 +87,7 @@ export const renderConnectionStatus = (
   return null;
 };
 
-const ServiceView : React.FC<ServiceViewProps> = ({ onServiceMessage, onClientMessage, Element, processName, websocketUrl, ourNode, enableChatSounds = false, fullscreen = false }) => {
-  const { id } = useParams<{ id?: string; }>();
-  const paramServiceId = id ?? '';
+const ServiceView : React.FC<ServiceViewProps> = ({ onServiceMessage, onClientMessage, Element, processName, websocketUrl, ourNode, enableChatSounds = false, fullscreen = false, paramServiceId }) => {
   const [isApiConnected, setIsApiConnected] = useState(false);
   const reconnectTimer = useRef<NodeJS.Timeout | null>(null);
   const [updateCount, setUpdateCount] = useState(0);

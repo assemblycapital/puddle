@@ -1,14 +1,5 @@
 import KinodeClientApi from "@kinode/client-api";
 export {useServiceStore} from "./store/service";
-export {
-  BrowserRouter,
-  Link,
-  Route,
-  Routes,
-  Router,
-  useLocation,
-  useNavigate,
-} from 'react-router-dom';
 
 export * from './utils';
 export * from './components/index';
@@ -760,7 +751,7 @@ export function peerFromJson(json: any): Peer {
   );
 }
 
-export const dfLinkRegex = /^df:\/\/([a-zA-Z0-9\-]+):([a-zA-Z0-9\-]+\.[a-zA-Z0-9\-]+)@([a-zA-Z0-9\-]+):([a-zA-Z0-9\-]+):([a-zA-Z0-9\-]+\.[a-zA-Z0-9\-]+)$/;
+export const dfLinkRegex = /^df:\/\/([a-zA-Z0-9\-_]+):([a-zA-Z0-9\-_]+\.[a-zA-Z0-9\-_]+)@([a-zA-Z0-9\-_]+):([a-zA-Z0-9\-_]+):([a-zA-Z0-9\-_]+\.[a-zA-Z0-9\-_]+)$/;
 
 export function dfLinkToRealLink(dfLink: string, baseOrigin:string) {
   return `http://${baseOrigin}/dartfrog:dartfrog:herobrine.os/join/${dfLink.slice(5)}`
