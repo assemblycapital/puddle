@@ -113,7 +113,6 @@ const HalfChat: React.FC<HalfChatProps> = ({ onServiceMessage, onClientMessage, 
         }
       },
       onOpen: (api) => {
-        console.log("halfchat onopen")
         setIsClientConnected(true);
         if (reconnectTimer.current) {
           clearTimeout(reconnectTimer.current);
