@@ -133,6 +133,7 @@ export class ServiceApi {
   }
 
   private initialize() {
+    console.log("puddle service api 1.0.1")
     // console.log("Attempting to connect to Kinode...", this.our, this.websocket_url);
     if (!(this.our.node && this.our.process)) {
       return;

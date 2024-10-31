@@ -1,6 +1,6 @@
 {
   "name": "@dartfrog/puddle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "exports": {

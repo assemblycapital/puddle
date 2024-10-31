@@ -1,6 +1,6 @@
 import _r from "@kinode/client-api";
 import { create as Cr } from "zustand";
-import $e, { useState as re, useRef as Ee, useEffect as ue, useCallback as He } from "react";
+import $e, { useState as re, useRef as Ee, useEffect as ue, useCallback as Ue } from "react";
 const Sn = !1, wn = "waterhouse.os", Rt = {
   "/fart": "https://bwyl.nyc3.digitaloceanspaces.com/kinode/dartfrog/chat_sounds/wet.mp3",
   "/no": "https://bwyl.nyc3.digitaloceanspaces.com/kinode/dartfrog/chat_sounds/hell-naw-dog.mp3",
@@ -186,8 +186,8 @@ function Ar() {
       {
         var M = W.ReactDebugCurrentFrame, G = M.getStackAddendum();
         G !== "" && (p += "%s", w = w.concat([G]));
-        var ee = w.map(function(H) {
-          return String(H);
+        var ee = w.map(function(U) {
+          return String(U);
         });
         ee.unshift("Warning: " + p), Function.prototype.apply.call(console[n], console, ee);
       }
@@ -246,9 +246,9 @@ function Ar() {
             var M = n.displayName || null;
             return M !== null ? M : X(n.type) || "Memo";
           case C: {
-            var G = n, ee = G._payload, H = G._init;
+            var G = n, ee = G._payload, U = G._init;
             try {
-              return X(H(ee));
+              return X(U(ee));
             } catch {
               return null;
             }
@@ -256,14 +256,14 @@ function Ar() {
         }
       return null;
     }
-    var ne = Object.assign, ie = 0, E, B, N, U, u, x, $;
+    var ne = Object.assign, ie = 0, E, B, N, H, u, x, $;
     function z() {
     }
     z.__reactDisabledLog = !0;
     function O() {
       {
         if (ie === 0) {
-          E = console.log, B = console.info, N = console.warn, U = console.error, u = console.group, x = console.groupCollapsed, $ = console.groupEnd;
+          E = console.log, B = console.info, N = console.warn, H = console.error, u = console.group, x = console.groupCollapsed, $ = console.groupEnd;
           var n = {
             configurable: !0,
             enumerable: !0,
@@ -302,7 +302,7 @@ function Ar() {
               value: N
             }),
             error: ne({}, n, {
-              value: U
+              value: H
             }),
             group: ne({}, n, {
               value: u
@@ -353,27 +353,27 @@ function Ar() {
       ee = D.current, D.current = null, O();
       try {
         if (p) {
-          var H = function() {
+          var U = function() {
             throw Error();
           };
-          if (Object.defineProperty(H.prototype, "props", {
+          if (Object.defineProperty(U.prototype, "props", {
             set: function() {
               throw Error();
             }
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
-              Reflect.construct(H, []);
+              Reflect.construct(U, []);
             } catch (pe) {
               M = pe;
             }
-            Reflect.construct(n, [], H);
+            Reflect.construct(n, [], U);
           } else {
             try {
-              H.call();
+              U.call();
             } catch (pe) {
               M = pe;
             }
-            n.call(H.prototype);
+            n.call(U.prototype);
           }
         } else {
           try {
@@ -455,19 +455,19 @@ function Ar() {
     function tr(n, p, w, M, G) {
       {
         var ee = Function.call.bind(_e);
-        for (var H in n)
-          if (ee(n, H)) {
+        for (var U in n)
+          if (ee(n, U)) {
             var q = void 0;
             try {
-              if (typeof n[H] != "function") {
-                var he = Error((M || "React class") + ": " + w + " type `" + H + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof n[H] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+              if (typeof n[U] != "function") {
+                var he = Error((M || "React class") + ": " + w + " type `" + U + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof n[U] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
                 throw he.name = "Invariant Violation", he;
               }
-              q = n[H](p, H, M, w, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
+              q = n[U](p, U, M, w, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
             } catch (se) {
               q = se;
             }
-            q && !(q instanceof Error) && (We(G), k("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", M || "React class", w, H, typeof q), We(null)), q instanceof Error && !(q.message in Re) && (Re[q.message] = !0, We(G), k("Failed %s type: %s", w, q.message), We(null));
+            q && !(q instanceof Error) && (We(G), k("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", M || "React class", w, U, typeof q), We(null)), q instanceof Error && !(q.message in Re) && (Re[q.message] = !0, We(G), k("Failed %s type: %s", w, q.message), We(null));
           }
       }
     }
@@ -546,7 +546,7 @@ function Ar() {
         });
       }
     }
-    var fr = function(n, p, w, M, G, ee, H) {
+    var fr = function(n, p, w, M, G, ee, U) {
       var q = {
         // This tag allows us to uniquely identify this as a React Element
         $$typeof: t,
@@ -554,7 +554,7 @@ function Ar() {
         type: n,
         key: p,
         ref: w,
-        props: H,
+        props: U,
         // Record the component responsible for creating this element.
         _owner: ee
       };
@@ -577,20 +577,20 @@ function Ar() {
     };
     function dr(n, p, w, M, G) {
       {
-        var ee, H = {}, q = null, he = null;
+        var ee, U = {}, q = null, he = null;
         w !== void 0 && (yt(w), q = "" + w), ar(p) && (yt(p.key), q = "" + p.key), or(p) && (he = p.ref, cr(p, G));
         for (ee in p)
-          _e.call(p, ee) && !sr.hasOwnProperty(ee) && (H[ee] = p[ee]);
+          _e.call(p, ee) && !sr.hasOwnProperty(ee) && (U[ee] = p[ee]);
         if (n && n.defaultProps) {
           var se = n.defaultProps;
           for (ee in se)
-            H[ee] === void 0 && (H[ee] = se[ee]);
+            U[ee] === void 0 && (U[ee] = se[ee]);
         }
         if (q || he) {
           var ce = typeof n == "function" ? n.displayName || n.name || "Unknown" : n;
-          q && lr(H, ce), he && ur(H, ce);
+          q && lr(U, ce), he && ur(U, ce);
         }
-        return fr(n, q, he, G, M, De.current, H);
+        return fr(n, q, he, G, M, De.current, U);
       }
     }
     var Je = W.ReactCurrentOwner, xt = W.ReactDebugCurrentFrame;
@@ -661,8 +661,8 @@ Check the top-level render call using <` + w + ">.");
         else if (n) {
           var G = Y(n);
           if (typeof G == "function" && G !== n.entries)
-            for (var ee = G.call(n), H; !(H = ee.next()).done; )
-              Ze(H.value) && _t(H.value, p);
+            for (var ee = G.call(n), U; !(U = ee.next()).done; )
+              Ze(U.value) && _t(U.value, p);
         }
       }
     }
@@ -706,8 +706,8 @@ Check the top-level render call using <` + w + ">.");
     var Et = {};
     function jt(n, p, w, M, G, ee) {
       {
-        var H = ve(n);
-        if (!H) {
+        var U = ve(n);
+        if (!U) {
           var q = "";
           (n === void 0 || typeof n == "object" && n !== null && Object.keys(n).length === 0) && (q += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
           var he = hr();
@@ -718,7 +718,7 @@ Check the top-level render call using <` + w + ">.");
         var ce = dr(n, p, w, G, ee);
         if (ce == null)
           return ce;
-        if (H) {
+        if (U) {
           var ye = p.children;
           if (ye !== void 0)
             if (M)
@@ -1033,29 +1033,29 @@ const Ir = ({ size: e = "32px", color: t = "#000000" }) => /* @__PURE__ */ s.jsx
   ue(() => {
     ne(h);
   }, [h]), ue(() => {
-    const U = () => {
+    const H = () => {
       document.hidden ? I.current = !1 : (I.current = !0, R(0)), E();
     };
-    return document.addEventListener("visibilitychange", U), () => {
-      document.removeEventListener("visibilitychange", U);
+    return document.addEventListener("visibilitychange", H), () => {
+      document.removeEventListener("visibilitychange", H);
     };
   }, []), ue(() => {
-    let U;
-    return (oe == null ? void 0 : oe.status) === ke.Connecting ? U = setTimeout(() => {
+    let H;
+    return (oe == null ? void 0 : oe.status) === ke.Connecting ? H = setTimeout(() => {
       Y(!0);
-    }, 5e3) : Y(!1), () => clearTimeout(U);
+    }, 5e3) : Y(!1), () => clearTimeout(H);
   }, [oe]);
   const E = () => {
     if (l) {
-      const U = Te.fromString(l).toShortString();
-      document.title = I.current || C === 0 ? U : `(${C}) ${U}`;
+      const H = Te.fromString(l).toShortString();
+      document.title = I.current || C === 0 ? H : `(${C}) ${H}`;
     }
   };
   ue(() => {
     E();
   }, [l, C]);
   const B = () => {
-    const U = new ht({
+    const H = new ht({
       our: {
         node: a,
         process: i
@@ -1095,12 +1095,12 @@ const Ir = ({ size: e = "32px", color: t = "#000000" }) => /* @__PURE__ */ s.jsx
         m(!1), N();
       }
     });
-    return W(U), U;
+    return W(H), H;
   };
   ue(() => {
     T(l);
-    const U = B(), u = () => {
-      U.unsubscribeService();
+    const H = B(), u = () => {
+      H.unsubscribeService();
     };
     return window.addEventListener("beforeunload", u), () => {
       window.removeEventListener("beforeunload", u), y.current && clearTimeout(y.current);
@@ -1112,8 +1112,8 @@ const Ir = ({ size: e = "32px", color: t = "#000000" }) => /* @__PURE__ */ s.jsx
     }, 5e3));
   };
   if (v) {
-    const U = ct(oe, j);
-    return U || /* @__PURE__ */ s.jsx(r, {});
+    const H = ct(oe, j);
+    return H || /* @__PURE__ */ s.jsx(r, {});
   }
   return /* @__PURE__ */ s.jsxs(
     "div",
@@ -1156,7 +1156,7 @@ const Ir = ({ size: e = "32px", color: t = "#000000" }) => /* @__PURE__ */ s.jsx
 }, $r = ({}) => {
   const [e, t] = re(""), { sendChat: r } = je(), i = (a) => {
     t(a.target.value);
-  }, o = He(
+  }, o = Ue(
     async (a) => {
       if (a.preventDefault(), !e) return;
       let h = Rr(e);
@@ -1409,7 +1409,7 @@ function Lr() {
       }
     }
     var b = l, T = S, te = v, Q = h, le = t, ve = m, oe = i, ge = I, X = R, ne = r, ie = a, E = o, B = y, N = !1;
-    function U(g) {
+    function H(g) {
       return N || (N = !0, console.warn("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.")), u(g) || F(g) === l;
     }
     function u(g) {
@@ -1448,7 +1448,7 @@ function Lr() {
     function _(g) {
       return F(g) === y;
     }
-    K.AsyncMode = b, K.ConcurrentMode = T, K.ContextConsumer = te, K.ContextProvider = Q, K.Element = le, K.ForwardRef = ve, K.Fragment = oe, K.Lazy = ge, K.Memo = X, K.Portal = ne, K.Profiler = ie, K.StrictMode = E, K.Suspense = B, K.isAsyncMode = U, K.isConcurrentMode = u, K.isContextConsumer = x, K.isContextProvider = $, K.isElement = z, K.isForwardRef = O, K.isFragment = L, K.isLazy = D, K.isMemo = A, K.isPortal = d, K.isProfiler = c, K.isStrictMode = f, K.isSuspense = _, K.isValidElementType = P, K.typeOf = F;
+    K.AsyncMode = b, K.ConcurrentMode = T, K.ContextConsumer = te, K.ContextProvider = Q, K.Element = le, K.ForwardRef = ve, K.Fragment = oe, K.Lazy = ge, K.Memo = X, K.Portal = ne, K.Profiler = ie, K.StrictMode = E, K.Suspense = B, K.isAsyncMode = H, K.isConcurrentMode = u, K.isContextConsumer = x, K.isContextProvider = $, K.isElement = z, K.isForwardRef = O, K.isFragment = L, K.isLazy = D, K.isMemo = A, K.isPortal = d, K.isProfiler = c, K.isStrictMode = f, K.isSuspense = _, K.isValidElementType = P, K.typeOf = F;
   }()), K;
 }
 var At;
@@ -1518,7 +1518,7 @@ function Bt() {
   return $t || ($t = 1, tt = Function.call.bind(Object.prototype.hasOwnProperty)), tt;
 }
 var rt, Ft;
-function Ur() {
+function Hr() {
   if (Ft) return rt;
   Ft = 1;
   var e = function() {
@@ -1567,10 +1567,10 @@ function Ur() {
   }, rt = o, rt;
 }
 var nt, Wt;
-function Hr() {
+function Ur() {
   if (Wt) return nt;
   Wt = 1;
-  var e = Vt(), t = qr(), r = ft(), i = Bt(), o = Ur(), a = function() {
+  var e = Vt(), t = qr(), r = ft(), i = Bt(), o = Hr(), a = function() {
   };
   process.env.NODE_ENV !== "production" && (a = function(v) {
     var l = "Warning: " + v;
@@ -1701,7 +1701,7 @@ function Hr() {
     function T(u) {
       function x($, z, O, L, D) {
         if (!($[z] instanceof u)) {
-          var A = u.name || C, d = U($[z]);
+          var A = u.name || C, d = H($[z]);
           return new j("Invalid " + L + " `" + D + "` of type " + ("`" + d + "` supplied to `" + O + "`, expected ") + ("instance of `" + A + "`."));
         }
         return null;
@@ -1881,7 +1881,7 @@ Valid keys: ` + JSON.stringify(Object.keys(u), null, "  ")
           return x;
       }
     }
-    function U(u) {
+    function H(u) {
       return !u.constructor || !u.constructor.name ? C : u.constructor.name;
     }
     return R.checkPropTypes = o, R.resetWarningCache = o.resetWarningCache, R.PropTypes = R, R;
@@ -1937,7 +1937,7 @@ function Yr() {
 }
 if (process.env.NODE_ENV !== "production") {
   var Nr = Vt(), Vr = !0;
-  lt.exports = Hr()(Nr.isElement, Vr);
+  lt.exports = Ur()(Nr.isElement, Vr);
 } else
   lt.exports = Yr()();
 var Br = lt.exports;
@@ -1960,7 +1960,7 @@ var me = typeof window < "u" ? window : null, dt = me === null, Fe = dt ? void 0
 }, fe = function(e, t, r) {
   var i = e[t];
   return i !== void 0 ? i : r;
-}, Ue = function(e, t, r, i) {
+}, He = function(e, t, r, i) {
   if (t) {
     if (i === "end")
       return 0;
@@ -1982,7 +1982,7 @@ var me = typeof window < "u" ? window : null, dt = me === null, Fe = dt ? void 0
 }, Zr = function(e, t) {
   var r;
   return r = {}, r[e] = t + "px", r;
-}, Ut = function(e, t) {
+}, Ht = function(e, t) {
   if (t === void 0 && (t = {}), dt)
     return {};
   var r = e, i, o, a, h, v, l;
@@ -2033,7 +2033,7 @@ var me = typeof window < "u" ? window : null, dt = me === null, Fe = dt ? void 0
     var c, f = l[this.a], _ = l[this.b];
     this.dragging && (c = E(d) - this.start + (this[Se] - this.dragOffset), te > 1 && (c = Math.round(c / te) * te), c <= f.minSize + f.snapOffset + this[Se] ? c = f.minSize + this[Se] : c >= this.size - (_.minSize + _.snapOffset + this[Ce]) && (c = this.size - (_.minSize + this[Ce])), c >= f.maxSize - f.snapOffset + this[Se] ? c = f.maxSize + this[Se] : c <= this.size - (_.maxSize - _.snapOffset + this[Ce]) && (c = this.size - (_.maxSize + this[Ce])), B.call(this, c), fe(t, "onDrag", we)(ie()));
   }
-  function U() {
+  function H() {
     var d = l[this.a].element, c = l[this.b].element, f = d[st](), _ = c[st]();
     this.size = f[i] + _[i] + this[Se] + this[Ce], this.start = f[a], this.end = f[h];
   }
@@ -2053,7 +2053,7 @@ var me = typeof window < "u" ? window : null, dt = me === null, Fe = dt ? void 0
     }, 0) > c)
       return d;
     var f = 0, _ = [], g = d.map(function(V, ae) {
-      var de = c * V / 100, _e = Ue(
+      var de = c * V / 100, _e = He(
         P,
         ae === 0,
         ae === d.length - 1,
@@ -2080,7 +2080,7 @@ var me = typeof window < "u" ? window : null, dt = me === null, Fe = dt ? void 0
   function z(d) {
     if (!("button" in d && d.button !== 0)) {
       var c = this, f = l[c.a].element, _ = l[c.b].element;
-      c.dragging || fe(t, "onDragStart", we)(ie()), d.preventDefault(), c.dragging = !0, c.move = N.bind(c), c.stop = $.bind(c), me[be]("mouseup", c.stop), me[be]("touchend", c.stop), me[be]("touchcancel", c.stop), me[be]("mousemove", c.move), me[be]("touchmove", c.move), f[be]("selectstart", we), f[be]("dragstart", we), _[be]("selectstart", we), _[be]("dragstart", we), f.style.userSelect = "none", f.style.webkitUserSelect = "none", f.style.MozUserSelect = "none", f.style.pointerEvents = "none", _.style.userSelect = "none", _.style.webkitUserSelect = "none", _.style.MozUserSelect = "none", _.style.pointerEvents = "none", c.gutter.style.cursor = le, c.parent.style.cursor = le, Fe.body.style.cursor = le, U.call(c), c.dragOffset = E(d) - c.end;
+      c.dragging || fe(t, "onDragStart", we)(ie()), d.preventDefault(), c.dragging = !0, c.move = N.bind(c), c.stop = $.bind(c), me[be]("mouseup", c.stop), me[be]("touchend", c.stop), me[be]("touchcancel", c.stop), me[be]("mousemove", c.move), me[be]("touchmove", c.move), f[be]("selectstart", we), f[be]("dragstart", we), _[be]("selectstart", we), _[be]("dragstart", we), f.style.userSelect = "none", f.style.webkitUserSelect = "none", f.style.MozUserSelect = "none", f.style.pointerEvents = "none", _.style.userSelect = "none", _.style.webkitUserSelect = "none", _.style.MozUserSelect = "none", _.style.pointerEvents = "none", c.gutter.style.cursor = le, c.parent.style.cursor = le, Fe.body.style.cursor = le, H.call(c), c.dragOffset = E(d) - c.end;
     }
   }
   R = x(R);
@@ -2100,12 +2100,12 @@ var me = typeof window < "u" ? window : null, dt = me === null, Fe = dt ? void 0
       dragging: !1,
       direction: Q,
       parent: m
-    }, _[Se] = Ue(
+    }, _[Se] = He(
       P,
       c - 1 === 0,
       !1,
       F
-    ), _[Ce] = Ue(
+    ), _[Ce] = He(
       P,
       !1,
       c === r.length - 1,
@@ -2127,7 +2127,7 @@ var me = typeof window < "u" ? window : null, dt = me === null, Fe = dt ? void 0
     return X(
       f.element,
       f.size,
-      Ue(
+      He(
         P,
         c === 0,
         c === r.length - 1,
@@ -2138,7 +2138,7 @@ var me = typeof window < "u" ? window : null, dt = me === null, Fe = dt ? void 0
   });
   function L(d) {
     var c = d.i === O.length, f = c ? O[d.i - 1] : O[d.i];
-    U.call(f);
+    H.call(f);
     var _ = c ? f.size - d.minSize - f[Ce] : d.minSize + f[Se];
     B.call(f, _);
   }
@@ -2202,7 +2202,7 @@ var Ye = /* @__PURE__ */ function(e) {
     h.gutter = function(v, l) {
       var S;
       return o ? S = o(v, l) : (S = document.createElement("div"), S.className = "gutter gutter-" + l), S.__isSplitGutter = !0, S;
-    }, this.split = Ut(this.parent.children, h);
+    }, this.split = Ht(this.parent.children, h);
   }, t.prototype.componentDidUpdate = function(i) {
     var o = this, a = this.props;
     a.children;
@@ -2229,7 +2229,7 @@ var Ye = /* @__PURE__ */ function(e) {
     if (j)
       m.minSize = h, m.sizes = v || this.split.getSizes(), this.split.destroy(!0, !0), m.gutter = function(k, P, F) {
         return F.previousSibling;
-      }, this.split = Ut(
+      }, this.split = Ht(
         Array.from(this.parent.children).filter(
           // eslint-disable-next-line no-underscore-dangle
           function(k) {
@@ -2345,7 +2345,7 @@ const Xr = ({ size: e, node: t }) => {
     const T = Array.from(e.messages.values()).sort((te, Q) => te.id - Q.id);
     h(T), W();
   }, [e.messages]);
-  const W = He(() => {
+  const W = Ue(() => {
     t.current && !C ? t.current.scrollIntoView({ behavior: "auto", block: "nearest", inline: "start" }) : y((T) => T + 1);
   }, [t, e.lastUpdateType, C, y]);
   ue(() => {
@@ -2353,7 +2353,7 @@ const Xr = ({ size: e, node: t }) => {
   }, [v]), ue(() => {
     v || W();
   }, [a, W, v]);
-  const k = window.origin.split(".").slice(1).join("."), P = He(
+  const k = window.origin.split(".").slice(1).join("."), P = Ue(
     (T) => {
       if (Pr(T))
         return /* @__PURE__ */ s.jsx(
@@ -2403,7 +2403,7 @@ const Xr = ({ size: e, node: t }) => {
         return /* @__PURE__ */ s.jsx("span", { children: T.replace(/\s+/g, " ") });
     },
     [W]
-  ), F = He(() => {
+  ), F = Ue(() => {
     if (S.current) {
       const { scrollTop: T, scrollHeight: te, clientHeight: Q } = S.current, le = T + Q >= te - 10;
       l(!le), I.current && clearTimeout(I.current), le ? R(!1) : I.current = setTimeout(() => {
@@ -2490,7 +2490,9 @@ const Xr = ({ size: e, node: t }) => {
                             flexDirection: "column",
                             overflowY: "auto",
                             paddingTop: "0.8rem",
-                            width: "100%"
+                            width: "100%",
+                            justifyContent: "flex-end",
+                            minHeight: "100%"
                           },
                           children: [
                             a.map((T, te) => /* @__PURE__ */ s.jsxs(
@@ -2663,7 +2665,7 @@ const Xr = ({ size: e, node: t }) => {
         te(N.serviceConnectionStatus);
       },
       onServiceMetadataChange(N) {
-        le(N.serviceMetadata), y.current || m((U) => U + 1);
+        le(N.serviceMetadata), y.current || m((H) => H + 1);
       },
       onPeerMapChange(N) {
         k(N.peerMap);
@@ -2673,14 +2675,14 @@ const Xr = ({ size: e, node: t }) => {
           if (N.Chat.FullMessageHistory)
             F(N.Chat.FullMessageHistory);
           else if (N.Chat.Message) {
-            const U = N.Chat.Message;
-            b(U);
+            const H = N.Chat.Message;
+            b(H);
           }
         }
-        e == null || e(N), y.current || m((U) => U + 1);
+        e == null || e(N), y.current || m((H) => H + 1);
       },
       onClientMessage(N) {
-        t == null || t(N), y.current || m((U) => U + 1);
+        t == null || t(N), y.current || m((H) => H + 1);
       },
       onOpen: (N) => {
         X(!0), l.current && (clearTimeout(l.current), l.current = null);
@@ -3223,7 +3225,7 @@ class ht {
     this.api = null, this.peerMap = /* @__PURE__ */ new Map(), this.localServices = [], this.autoReconnectEnabled = !0, this.reconnectInterval = null, this.reconnectAttempts = 0, this.heartbeatInterval = null, this.our = t, this.websocket_url = r, this.onOpen = i, this.onClose = o, this.serviceId = a, this.onServiceConnectionStatusChange = h, this.onServiceMetadataChange = v, this.onFullServiceMetadataChange = l, this.onServiceMessage = S, this.onClientMessage = m, this.onProcessMessage = y, this.onPeerMapChange = C, this.onLocalServicesChange = R, this.autoReconnectEnabled = !I, this.initialize();
   }
   initialize() {
-    if (!(this.our.node && this.our.process))
+    if (console.log("puddle service api 1.0.1"), !(this.our.node && this.our.process))
       return;
     this.serviceMetadata = null, this.fullServiceMetadata = null, this.serviceConnectionStatus = null;
     const t = new _r({
@@ -3371,12 +3373,12 @@ class ht {
       const i = r.Meta;
       if (i.Peer) {
         const o = i.Peer;
-        let a = Ht(o);
+        let a = Ut(o);
         this.peerMap.set(a.node, a), this.onPeerMapChange(this);
       } else if (i.PeerList) {
         const o = i.PeerList;
         for (const a of o) {
-          let h = Ht(a);
+          let h = Ut(a);
           this.peerMap.set(h.node, h);
         }
         this.onPeerMapChange(this);
@@ -3585,7 +3587,7 @@ class Ve {
     );
   }
 }
-function Ht(e) {
+function Ut(e) {
   const t = e.peer_data ? {
     hostedServices: e.peer_data.hosted_services.map((r) => an(r)),
     profile: dn(e.peer_data.profile),
@@ -3759,7 +3761,7 @@ export {
   Er as maybePlayTTS,
   Rr as maybeReplaceWithImage,
   Yt as nodeProfileLink,
-  Ht as peerFromJson,
+  Ut as peerFromJson,
   dn as profileFromJson,
   an as publicServiceFromJson,
   Xt as publicServiceMetadataFromJson,

@@ -240,6 +240,8 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
                 overflowY:"auto",
                 paddingTop:"0.8rem",
                 width: "100%",
+                justifyContent: "flex-end",
+                minHeight: "100%",
               }}
             >
               {chatMessageList.map((message, index) => (
