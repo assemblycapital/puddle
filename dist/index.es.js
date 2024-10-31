@@ -2478,10 +2478,6 @@ const Xr = ({ size: e, node: t }) => {
                         maxWidth: "100%",
                         height: "100%",
                         maxHeight: "100%",
-                        justifyContent: "flex-end",
-                        alignContent: "flex-end",
-                        alignItems: "flex-end",
-                        justifyItems: "flex-end",
                         position: "relative"
                       },
                       onScroll: F,
@@ -2493,7 +2489,8 @@ const Xr = ({ size: e, node: t }) => {
                             flexGrow: 1,
                             flexDirection: "column",
                             overflowY: "auto",
-                            paddingTop: "0.8rem"
+                            paddingTop: "0.8rem",
+                            width: "100%"
                           },
                           children: [
                             a.map((T, te) => /* @__PURE__ */ s.jsxs(
@@ -2505,7 +2502,8 @@ const Xr = ({ size: e, node: t }) => {
                                   flexDirection: "row",
                                   width: "100%",
                                   gap: "0.8rem",
-                                  padding: "10px 0rem"
+                                  padding: "10px 0rem",
+                                  paddingRight: "10px"
                                 },
                                 children: [
                                   /* @__PURE__ */ s.jsx(
@@ -2533,7 +2531,8 @@ const Xr = ({ size: e, node: t }) => {
                                         flexDirection: "column",
                                         width: "100%",
                                         gap: "3px",
-                                        minWidth: 0
+                                        minWidth: 0,
+                                        maxWidth: "100%"
                                       },
                                       children: [
                                         /* @__PURE__ */ s.jsxs("div", { style: { verticalAlign: "top", lineHeight: "0.9" }, children: [
@@ -2684,7 +2683,7 @@ const Xr = ({ size: e, node: t }) => {
         t == null || t(N), y.current || m((U) => U + 1);
       },
       onOpen: (N) => {
-        console.log("halfchat onopen"), X(!0), l.current && (clearTimeout(l.current), l.current = null);
+        X(!0), l.current && (clearTimeout(l.current), l.current = null);
       },
       onClose() {
         X(!1), E();

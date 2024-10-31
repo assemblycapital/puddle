@@ -228,10 +228,6 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
               maxWidth:"100%",
               height:"100%",
               maxHeight:"100%",
-              justifyContent: "flex-end",
-              alignContent: "flex-end",
-              alignItems: "flex-end",
-              justifyItems: "flex-end",
               position: "relative",
             }}
             onScroll={handleScroll}
@@ -243,6 +239,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
                 flexDirection:"column",
                 overflowY:"auto",
                 paddingTop:"0.8rem",
+                width: "100%",
               }}
             >
               {chatMessageList.map((message, index) => (
@@ -254,6 +251,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
                     width:"100%",
                     gap:"0.8rem",
                     padding: "10px 0rem",
+                    paddingRight: "10px",
                   }}
                 >
                   <div
@@ -276,6 +274,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
                       width:"100%",
                       gap: "3px",
                       minWidth: 0,
+                      maxWidth: "100%",
                     }}
                   >
                     <div style={{ verticalAlign: "top",  lineHeight: "0.9" }}>
