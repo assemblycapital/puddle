@@ -835,10 +835,13 @@ export function getRecencyText(diff:number) {
     const hrs = Math.floor(diff / 3600000);
     return `${hrs} ${hrs === 1 ? 'hr' : 'hrs'} ago`;
   }
-  if (diff > 7307200000) {
-    const years = Math.floor(diff / 31536000000);
-    const months = Math.floor((diff % 31536000000) / 2592000000);
-    return `${years} ${years === 1 ? 'yr' : 'yrs'} ${months} ${months === 1 ? 'month' : 'months'} ago`;
+  if (diff > 31536000000) { // More than 1 year (in milliseconds)
+    const date = new Date(Date.now() - diff);
+    return date.toLocaleDateString();
+  }
+  if (diff > 7307200000) { // ~3 months in ms
+    const months = Math.floor(diff / 2592000000);
+    return `${months} ${months === 1 ? 'month' : 'months'} ago`;
   }
   const days = Math.floor(diff / 86400000);
   return days === 1 ? "1 day ago" : `${days} days ago`;
