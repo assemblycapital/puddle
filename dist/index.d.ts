@@ -270,7 +270,7 @@ export declare function peerFromJson(json: any): Peer;
 export declare const dfLinkRegex: RegExp;
 export declare function dfLinkToRealLink(dfLink: string, baseOrigin: string): string;
 export declare function nodeProfileLink(node: string, baseOrigin: string): string;
-export declare const DEFAULT_PFP = "https://bwyl.nyc3.digitaloceanspaces.com/kinode/dartfrog/dartfrog256_small_nobg.png";
+export declare const DEFAULT_PFP = "https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/dartfrog256_small_nobg.png";
 export declare function getPeerPfp(peer: Peer | undefined): string;
 export declare function getPeerNameColor(peer: Peer | undefined): string;
 export declare function getClassForNameColor(nameColor: NameColor): string;

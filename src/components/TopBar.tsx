@@ -44,7 +44,7 @@ const TopBar = ({ serviceId }) => {
 
       }}
       className="hover-dark-gray"
-      href={`http://${baseOrigin}/dartfrog:dartfrog:herobrine.os/`}
+      href={`http://${baseOrigin}/dartfrog:dartfrog:gliderlabs.os/`}
     >
         <HomeIcon size='15px' color='#9d9d9d' />
     </a>

@@ -1,5 +1,5 @@
 export const IS_FAKE = false;
-export const HUB_NODE = IS_FAKE ? "fake.dev" : "waterhouse.os";
+export const HUB_NODE = IS_FAKE ? "fake.os" : "gliderlabs.os";
 
 export const soundEffectCommands = {
   '/fart': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_sounds/wet.mp3',
@@ -8,7 +8,7 @@ export const soundEffectCommands = {
   '/why': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_sounds/why.mp3',
   '/people': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_sounds/the-people.mp3',
   '/robust': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_sounds/robust-josh.mp3',
-  '/robustness': 'https://bwyl.nyc3.digitaloceanspaces.com/kinode/dartfrog/chat_sounds/robust-basile.mp3',
+  '/robustness': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_sounds/robust-basile.mp3',
 };
 
 export const maybePlayTTS = (msg: string) => {

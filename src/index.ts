@@ -755,11 +755,11 @@ export function peerFromJson(json: any): Peer {
 export const dfLinkRegex = /^df:\/\/([a-zA-Z0-9\-_]+):([a-zA-Z0-9\-_]+\.[a-zA-Z0-9\-_]+)@([a-zA-Z0-9\-_]+):([a-zA-Z0-9\-_]+):([a-zA-Z0-9\-_]+\.[a-zA-Z0-9\-_]+)$/;
 
 export function dfLinkToRealLink(dfLink: string, baseOrigin:string) {
-  return `http://${baseOrigin}/dartfrog:dartfrog:herobrine.os/join/${dfLink.slice(5)}`
+  return `http://${baseOrigin}/dartfrog:dartfrog:gliderlabs.os/join/${dfLink.slice(5)}`
 }
 
 export function nodeProfileLink(node: string, baseOrigin:string) {
-  return `http://${baseOrigin}/dartfrog:dartfrog:herobrine.os/nodes/${node}`
+  return `http://${baseOrigin}/dartfrog:dartfrog:gliderlabs.os/nodes/${node}`
 }
 
 

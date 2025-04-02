@@ -58,7 +58,7 @@ export const renderConnectionStatus = (
         </div>
         <div>
           <a
-            href={`http://${baseOrigin}/dartfrog:dartfrog:herobrine.os`}
+            href={`http://${baseOrigin}/dartfrog:dartfrog:gliderlabs.os`}
           >
 
             <button
