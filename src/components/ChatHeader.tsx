@@ -55,7 +55,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ }) => {
           {(!chatSoundsEnabled) ? 'unmute' : 'mute'}
         </button>
         
-        <div>img: /die /kino /panda /dev /tiger /wow /cry /ok /oops</div>
+        <div>img: /die /panda /dev /tiger /wow /cry /ok /oops</div>
         {chatSoundsEnabled &&
           <div>sfx: /yes /no /why /fart /people /robust /robustness</div>
         }

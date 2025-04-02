@@ -33,7 +33,6 @@ export const maybePlaySoundEffect = (msg: string) => {
 
 export const imageCommands = {
   '/die': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_images/die.webp',
-  '/kino': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_images/kino.webp',
   '/panda': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_images/panda.jpeg',
   '/dev': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_images/dev.jpeg',
   '/tiger': 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/chat_images/tiger.jpeg',

@@ -2501,7 +2501,8 @@ const Zr = ({ size: e, node: t }) => {
                                   width: "100%",
                                   gap: "0.8rem",
                                   padding: "10px 0rem",
-                                  paddingRight: "10px"
+                                  paddingRight: "10px",
+                                  boxSizing: "border-box"
                                 },
                                 children: [
                                   /* @__PURE__ */ s.jsx(
@@ -2509,7 +2510,8 @@ const Zr = ({ size: e, node: t }) => {
                                     {
                                       style: {
                                         userSelect: "none",
-                                        paddingLeft: "10px"
+                                        paddingLeft: "10px",
+                                        flexShrink: 0
                                       },
                                       children: /* @__PURE__ */ s.jsx(
                                         "a",
@@ -2530,7 +2532,8 @@ const Zr = ({ size: e, node: t }) => {
                                         width: "100%",
                                         gap: "3px",
                                         minWidth: 0,
-                                        maxWidth: "100%"
+                                        maxWidth: "100%",
+                                        boxSizing: "border-box"
                                       },
                                       children: [
                                         /* @__PURE__ */ s.jsxs("div", { style: { verticalAlign: "top", lineHeight: "0.9" }, children: [

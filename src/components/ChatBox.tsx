@@ -254,12 +254,14 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
                     gap:"0.8rem",
                     padding: "10px 0rem",
                     paddingRight: "10px",
+                    boxSizing: "border-box",
                   }}
                 >
                   <div
                     style={{
                       userSelect:"none",
                       paddingLeft: "10px",
+                      flexShrink: 0,
                     }}
                   >
                     <a
@@ -277,6 +279,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
                       gap: "3px",
                       minWidth: 0,
                       maxWidth: "100%",
+                      boxSizing: "border-box",
                     }}
                   >
                     <div style={{ verticalAlign: "top",  lineHeight: "0.9" }}>
