@@ -19,7 +19,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom', '@kinode/client-api', 'zustand', ],
+      external: ['react', 'react-dom', '@hyperware-ai/client-api', 'zustand', ],
     },
   },
   resolve: {

@@ -1,4 +1,4 @@
-import KinodeClientApi from "@kinode/client-api";
+import KinodeClientApi from "@hyperware-ai/client-api";
 export {useServiceStore} from "./store/service";
 
 export * from './utils';
@@ -764,7 +764,7 @@ export function nodeProfileLink(node: string, baseOrigin:string) {
 
 
 
-export const DEFAULT_PFP = 'https://bwyl.nyc3.digitaloceanspaces.com/kinode/dartfrog/dartfrog256_small_nobg.png'
+export const DEFAULT_PFP = 'https://bwyl.nyc3.digitaloceanspaces.com/hyperware/dartfrog/dartfrog256_small_nobg.png'
 export function getPeerPfp(peer: Peer | undefined): string {
   if (peer && peer.peerData && peer.peerData.profile.pfp) {
     return peer.peerData.profile.pfp
