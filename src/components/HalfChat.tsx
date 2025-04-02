@@ -221,7 +221,7 @@ const HalfChat: React.FC<HalfChatProps> = ({ onServiceMessage, onClientMessage, 
                 marginLeft:"8px",
               }}
             >
-              <div style={{ flex: 1, overflow: 'auto' }}>
+              <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                 <ChatBox chatState={chatState} />
               </div>
               <DisplayUserActivity metadata={serviceMetadata} />

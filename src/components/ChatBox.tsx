@@ -334,6 +334,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chatState }) => {
               style={{
                 width: "100%",
                 maxWidth: "100%",
+                height: "100%",
               }}
             >
               <ChatInput />
